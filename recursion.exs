@@ -29,3 +29,7 @@ list = [1,2,3,4,5,6,7,8,9]
 IO.puts Recursion.multiply(10)
 IO.puts Recursion.sum_list(list, 0)
 IO.inspect Recursion.double_each(list)
+
+range = 1..9
+IO.puts Enum.reduce(range, 0, &+/2)
+IO.inspect Enum.map(range, fn x -> x* 2 end)
